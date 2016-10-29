@@ -11,6 +11,10 @@ class CommentTableSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('comments')->insert([
+      	'idUser'=>'1',
+      	'idProduct' => '1',
+      	'comment' => 'Tiene envios para Monterrey?'
       	]);
     }
 }
