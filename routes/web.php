@@ -15,6 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+//Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::resource('user', 'UserController', 
+	['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+
+Route::resource('comment', 'CommentController', 
+	['only' => ['index', 'store', 'show']]);
+
+Route::resource('product', 'ProductController', 
+	['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+
