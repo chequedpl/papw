@@ -11,11 +11,11 @@ class Comment extends Model
 	'comentario'
 	];
 
-    public function user(){
+    public function users(){
     	return $this->belongsTo(User::class);
     }
 
-    public function product(){
-    	return $this->belongsTo(User::class);
+    public function products(){
+    	return $this->belongsTo(Product::class);
     }
 }

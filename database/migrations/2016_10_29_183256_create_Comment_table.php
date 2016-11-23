@@ -14,10 +14,10 @@ class CreateCommentTable extends Migration
     public function up()
     {
         Schema::create('comments', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('idComment')->index();
+            $table->string('comment');
             $table->integer('idUser');
             $table->integer('idProduct');
-            $table->string('comment');
         });
     }
 
